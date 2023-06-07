@@ -4,11 +4,13 @@ This tool will de-serialse/expand/explode any embedded XML/JSON data structures 
 
 This is particularly useful for reading logfiles that contain unstructured data into Excel, PowerBI, Tableau, Python, MATLAB and many other tools that expect tabular data.
 
+Alot of instrumentation for security operations, IoT devices, drones and data lakes is in the form of logfiles which contains a combination of tabular data & unstructured data. This tool addresses that complexity and allows one to more readily make use of these files, either to inspect them or for applications such as data science.
+
 A mix of JSON objects, JSON arrays and XML can all be combined into a single CSV file.
 
-## Purpose
+## Installing
 
-Alot of instrumentation for IoT devices, drones and data lakes is in the form of logfiles which contains a combination of tabular data & unstructured data. This tool addresses that complexity and allows one to more readily make use of these files, either to inspect them or for applications such as data science. 
+Download the contents of the **dist** folder - the delog.jar is an uber-jar with everything you need.
 
 ## Example usage
 
@@ -39,6 +41,8 @@ Into:
 "ColC","ColB","ColA","Ingredient.Qty","Ingredient.Qty2","Ingredient.Item","Ingredient"
 "f","e","d","500","9","Cottage cheese",
 ```
+
+Note that JSON & XML are supported, so a mix of JSON objects, JSON arrays and XML can all be combined into a single CSV file.
 
 ## License
 
@@ -83,4 +87,3 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ```
-
