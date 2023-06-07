@@ -36,7 +36,7 @@ import javax.xml.parsers.*;
  *
  * Software: tellusion-utils
  * License: GNU General Public License version 3
- * Licensor: Andrew Prendergast
+ * Licensor: Andrew Prendergast ap@tellusion.com
  *
  * GNU General Public License version 3
  * ------------------------------------

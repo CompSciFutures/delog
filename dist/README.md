@@ -64,7 +64,7 @@ Commons Clause License Condition notice.
 
 Software: tellusion-utils
 License: GNU General Public License version 3 w/ Commons Clause
-Licensor: Andrew Prendergast ap@andrewprendergast.com
+Licensor: Andrew Prendergast ap@tellusion.com
 
 GNU General Public License version 3
 ------------------------------------
