@@ -44,46 +44,31 @@ Into:
 
 Note that JSON & XML are supported, so a mix of JSON objects, JSON arrays and XML can all be combined into a single CSV file.
 
-## License
+## Example: Office 365 Audit logs with embedded JSON
 
-```text
-“Commons Clause” License Condition v1.0
-=======================================
+Here is a typical exmaple of unstructured data in security logs: if you have Office 365 E3 or higher, you probably have access to audit logs in O365 admin. They are CSV logs, but they contain within them unstructured information about each event that's in the form of a JSON object inside a single CSV cell.
 
-The Software is provided to you by the Licensor under the License,
-as defined below, subject to the following condition.
+Delog allows you to read them, easily.  To get the logs, follow these instructions.
 
-Without limiting other conditions in the License, the grant of rights
-under the License will not include, and the License does not grant to
-you, the right to Sell the Software.
+**1. Go to Office 365 Admin:**
 
-For purposes of the foregoing, “Sell” means practicing any or all of
-the rights granted to you under the License to provide to third
-parties, for a fee or other consideration (including without
-limitation fees for hosting or consulting/ support services related
-to the Software), a product or service whose value derives, entirely
-or substantially, from the functionality of the Software. Any license
-notice or attribution required by the License must also include this
-Commons Clause License Condition notice.
+![O365-1.png](images%2FO365-1.png)
 
-Software: tellusion-utils
-License: GNU General Public License version 3 w/ Commons Clause
-Licensor: Andrew Prendergast ap@tellusion.com
+**2. Click 'Show All'**
 
-GNU General Public License version 3
-------------------------------------
+![O365-2.png](images%2FO365-2.png)
 
-(C) COPYRIGHT 2000-2023 Andrew Prendergast
+**3. Click 'Compliance'**
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License version 3 as
-published by the Free Software Foundation.
+![O365-3.png](images%2FO365-3.png)
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+**4. Click 'Audit'**
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-```
+![O365-4.png](images%2FO365-4.png)
+
+**5. Select your search scope and click 'Search' then wait for your search to finish. Click 'Completed' once it's ready**
+
+![O365-5.png](images%2FO365-5.png)
+
+There, you should get a CSV with embedded JSON representing unstructured data which can be run through **delog** before being able to inspect it in Excel. 
+
