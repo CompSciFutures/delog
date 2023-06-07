@@ -4,7 +4,7 @@ This tool will de-serialse/expand/explode any embedded XML/JSON data structures 
 
 This is particularly useful for reading logfiles that contain unstructured data into Excel, PowerBI, Tableau, Python, MATLAB and many other tools that expect tabular data.
 
-Alot of instrumentation for IoT devices, drones and data lakes is in the form of logfiles which contains a combination of tabular data & unstructured data. This tool addresses that complexity and allows one to more readily make use of these files, either to inspect them or for applications such as data science. 
+Alot of instrumentation for security operations, IoT devices, drones and data lakes is in the form of logfiles which contains a combination of tabular data & unstructured data. This tool addresses that complexity and allows one to more readily make use of these files, either to inspect them or for applications such as data science. 
 
 A mix of JSON objects, JSON arrays and XML can all be combined into a single CSV file.
 
