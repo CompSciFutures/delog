@@ -12,6 +12,8 @@ A mix of JSON objects, JSON arrays and XML can all be combined into a single CSV
 
 Download the contents of the **dist** folder - the delog.jar is an uber-jar with everything you need.
 
+Or just grab the latest release ZIP file from GitHub.
+
 ## Example usage
 
 ```text
