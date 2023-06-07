@@ -1,0 +1,43 @@
+ColA,ColB,ColC,ColD
+a,b,c,"{
+  'rating': 3.0,
+  'reviewerName': u'an lam',
+  'reviewText': u'Ch\u1ea5t l\u01b0\u1ee3ng t\u1ea1m \u1ed5n',
+  'categories': [u'Gi\u1ea3i Tr\xed - Caf\xe9'],
+  'gPlusPlaceId': u'108103314380004200232',
+  'unixReviewTime': 1372686659,
+  'reviewTime': u'Jul 1, 2013',
+  'gPlusUserId': u'100000010817154263736'
+}"
+d,e,f,"      <Ingredient>
+         <Qty unit=""ml"">500</Qty>
+         <Qty unit=""g"">9</Qty>
+         <Item>Cottage cheese</Item>
+      </Ingredient>"
+g,h,I,"
+   {
+    'user_id': '101463350189962023774', 
+    'name': 'Jordan Adams', 
+    'time': 1627750414677, 
+    'rating': 5, 
+    'text': 'Cool place, great people, awesome dentist!', 
+    'pics': [
+    {
+      'url': ['https://lh5.googleusercontent.com/p/AF1QipNq2nZC5TH4_M7h5xRAd
+      61hoTgvY1o9lozABguI=w150-h150-k-no-p']
+    }
+    ], 
+    'resp': {
+      'time': 1628455067818, 
+      'text': 'Thank you for your five-star review! -Dr. Blake'
+    }, 
+    'gmap_id': '0x87ec2394c2cd9d2d:0xd1119cfbee0da6f3'
+  }"
+j,k,l,'<blah>w00t</blah>
+m,n,o,"<menu id=""file"" value=""File"">
+  <popup>
+    <menuitem value=""New"" onclick=""CreateNewDoc()"" />
+    <menuitem value=""Open"" onclick=""OpenDoc()"" />
+    <menuitem value=""Close"" onclick=""CloseDoc()"" />
+  </popup>
+</menu>"

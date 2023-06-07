@@ -1,0 +1,13 @@
+Tommy Hiker:
+
+In this article, I describe the different ways I learned about sending logs to Elasticsearch:
+https://medium.com/cloud-native-daily/how-to-send-application-logs-to-elasticsearch-effectively-3b4a83d70168
+
+This article explores three different architectures for sending application logs to Elasticsearch, each with their own set of advantages and disadvantages:
+
+Application -> Filebeat -> Logstash -> Elasticsearch
+Application -> Filebeat -> Elasticsearch
+Application (Java) + Logstash-logback-encoder -> Logstash -> Elasticsearch
+
+
+

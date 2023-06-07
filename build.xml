@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<!-- ANT Build file for constructing the finished jar+libs directory -->
+<project default="main">
+
+    <taskdef name="launch4j" classname="net.sf.launch4j.ant.Launch4jTask" classpath="packages/Launch4j-3.4/launch4j.jar:packages/Launch4j-3.4/lib/xstream.jar" />
+
+    <target name="main" depends="makejar" description="Main target">
+    </target>
+
+    <condition property="isWindows">
+        <os family="windows" />
+    </condition>
+
+    <condition property="isUnix">
+        <os family="unix" />
+    </condition>
+
+    <target name="mvn_windows_setup" if="isWindows">
+        <property name="mvn.executable" value="cmd" />
+        <property name="mvn.args" value="/c" />
+    </target>
+
+    <target name="mvn_unix_setup" if="isUnix">
+        <property name="mvn.executable" value="sh" />
+        <property name="mvn.args" value="-c" />
+    </target>
+
+    <target name="run-mvn-goals" depends="mvn_windows_setup, mvn_unix_setup">
+        <echo message="Hello, world: ${basedir}"/>
+        <exec dir="${basedir}" executable="${mvn.executable}">
+            <arg line="${mvn.args} 'mvn ${p_goals}'" />
+        </exec>
+    </target>
+
+    <!-- let's say you want to run mvn clean install -->
+    <target name="mvn-clean-install">
+        <antcall target="run-mvn-goals">
+            <param name="p_goals" value="clean install"/>
+        </antcall>
+    </target>
+
+    <!-- or maybe you want to clean, package but skipping tests -->
+    <target name="mvn-clean-package-notests">
+        <antcall target="run-mvn-goals">
+            <param name="p_goals" value="clean package -DskipTests"/>
+        </antcall>
+    </target>
+
+    <target name="makejar" description="make the jar" depends="mvn-clean-install">
+        <delete dir="dist/" />
+
+        <copy todir="dist" file="LICENSE.txt" />
+        <copy tofile="dist/README.md" file="README.md" />
+        <copy tofile="dist/testdata.csv" file="testdata/set3.csv" />
+        <copy tofile="dist/delog.jar" file="target/delog-1.0.0.jar" />
+
+
+        <!-- libs -->
+        <!--
+        <copy todir="dist/lib" file="../../.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar" />
+        <copy todir="dist/lib" file="../../.m2/repository/gnu/getopt/java-getopt/1.0.13/java-getopt-1.0.13.jar" />
+        <copy todir="dist/lib" file="../../.m2/repository/com/google/code/gson/gson/2.10/gson-2.10.jar" />
+        -->
+
+        <!--
+        <jar jarfile="dist/delog.jar">
+            <manifest>
+                <attribute name="Class-Path" value="lib/log4j-1.2.17.jar lib/java-getopt-1.0.13.jar lib/gson-2.10.jar" />
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Main-Class" value="CSVXMLJSONMain"/>
+            </manifest>
+            <fileset dir="out/production/delog" />
+        </jar>
+        -->
+
+        <!-- the build date & Git revision -->
+        <tstamp>
+            <format property="NOW" pattern="yyyy-MM-dd HH:mm:ss" />
+        </tstamp>
+        <echo file="dist/REVISION.txt">Build Date: ${NOW}${line.separator}${line.separator}</echo>
+        <exec executable="git" failonerror="true" outputproperty="git.changelog">
+            <arg line="log -1 "/>
+        </exec>
+        <echo file="dist/REVISION.txt" append="true">${git.changelog}</echo>
+
+        <antcall target="launch4j">
+        </antcall>
+    </target>
+
+    <target name="launch4j" if="isWindows">
+        <!--<launch4j configFile="delog.launch4j.cfg.xml" />-->
+    </target>
+
+</project>
