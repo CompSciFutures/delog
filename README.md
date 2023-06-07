@@ -8,6 +8,8 @@ Alot of instrumentation for security operations, IoT devices, drones and data la
 
 A mix of JSON objects, JSON arrays and XML can all be combined into a single CSV file.
 
+Tab-delimited is not currently implemented as it's support for multi-line isn't as well defined - let me know if there's a need for it.
+
 ## Installing
 
 Download the contents of the **dist** folder - the delog.jar is an uber-jar with everything you need.
