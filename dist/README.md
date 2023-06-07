@@ -42,6 +42,8 @@ Into:
 "f","e","d","500","9","Cottage cheese",
 ```
 
+Note that JSON & XML are supported, so a mix of JSON objects, JSON arrays and XML can all be combined into a single CSV file.
+
 ## License
 
 ```text
