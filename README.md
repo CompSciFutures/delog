@@ -1,6 +1,6 @@
 # delog: JSON/XML logfile deserializer
 
-> **_NOTE:_** **TEST DATASETS WANTED!! Do you have TDF/CSV data containing unstructured XML/JSON data? email me at ap@andrewprendergast.com and I'll update delog so it works with it automagically (See issue [https://github.com/CompSciFutures/delog/issues/10]).**
+> **_NOTE:_** **TEST DATASETS WANTED!! Do you have TDF/CSV data containing unstructured XML/JSON data that delog didn't handle? email me at ap@andrewprendergast.com and I'll update delog so it works with it automagically (See issue [https://github.com/CompSciFutures/delog/issues/10]).**
 > 
 This tool will de-serialse/expand/explode any embedded XML/JSON data structures found in comma-separated (CSV) logfiles so that each element or field found in JSON or XML arrays or data structures found in the CSV file will be converted into separate, individual CSV columns for each.
 
