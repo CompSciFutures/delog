@@ -78,3 +78,6 @@ Delog allows you to read them, easily.  To get the logs, follow these instructio
 
 There, you should get a CSV with embedded JSON representing unstructured data which can be run through **delog** before being able to inspect it in Excel. 
 
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning.
