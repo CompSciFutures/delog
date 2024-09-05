@@ -12,6 +12,11 @@ A mix of JSON objects, JSON arrays and XML can all be combined into a single CSV
 
 Tab-delimited is not currently implemented as it's support for multi-line isn't as well defined - let me know if there's a need for it.
 
+## Philosophy
+
+<a href="https://x.com/CompSciFutures/status/1820016959133483324">![image](https://github.com/user-attachments/assets/ae35ec0d-8de9-4bb0-a83f-3a6a0c958a3e)</a>
+
+
 ## Installing
 
 Download the contents of the **dist** folder - the delog.jar is an uber-jar with everything you need.
